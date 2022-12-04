@@ -16,7 +16,7 @@ const create = async () => {
                 }
             )
         } else {
-           throw 'FS operation failed'        
+           throw new Error('FS operation failed');        
         }
     })
 

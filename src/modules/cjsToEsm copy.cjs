@@ -1,8 +1,3 @@
-/* import path from 'path';
-import {release, version } from 'os';
-import { createServer: createServerHttp } from 'http';
-import default from './files/c';
- */
 const path = require('path');
 const { release, version } = require('os');
 const { createServer: createServerHttp } = require('http');

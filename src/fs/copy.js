@@ -10,11 +10,11 @@ const pathToCopyFile = path.join(__dirname, 'files_copy');
 const copy = async () => {
     fs.access(pathToFile, (err)=>{
         if (err) {
-            throw 'FS operation failed'
+            throw new Error('FS operation failed');
         } else {   
            fs.mkdir(pathToCopyFile, err=>{
             if(err) {
-                throw 'FS operation failed'}})      
+                throw new Error('FS operation failed');}})      
         }
     })
 

@@ -8,14 +8,14 @@ const pathToFile = path.join(__dirname, 'files');
 const rename = async () => {
     fs.access(pathToFile, (err)=>{
         if (err) {
-            throw 'FS operation failed' 
+            throw new Error('FS operation failed');
             
         } else {
             fs.rename(
                 path.join(pathToFile, 'wrongFilename.txt'),
                 path.join(pathToFile, 'properFilename.md'),
                 (err1) => {
-                    if (err1) throw 'FS operation failed';
+                    if (err1) throw new Error('FS operation failed');
                 }
             )     
         }
